@@ -1,0 +1,25 @@
+{
+  "name": "cycle_emojis",
+  "version": "0.1.0",
+  "author": "Lev Izraelit",
+  "license": "ISC",
+  "devDependencies": {
+    "cycle-scripts": "2.1.0"
+  },
+  "dependencies": {
+    "@cycle/dom": "20.1.0",
+    "@cycle/run": "4.1.0",
+    "@cycle/storage": "^5.0.3",
+    "xstream": "11.1.0"
+  },
+  "scripts": {
+    "start": "cycle-scripts start",
+    "test": "cycle-scripts test",
+    "build": "cycle-scripts build",
+    "eject": "cycle-scripts eject"
+  },
+  "cca": {
+    "language": "javascript",
+    "streamLib": "xstream"
+  }
+}
