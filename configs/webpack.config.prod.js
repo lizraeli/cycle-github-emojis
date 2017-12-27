@@ -90,8 +90,10 @@ module.exports = {
       Snabbdom: "snabbdom-pragma"
     }),
     // Uglify plugin, depending on the devtool options, Source Maps are generated.
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: this.devtool && this.devtool.indexOf("source-map") >= 0
+    new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
+    new webpack.SourceMapDevToolPlugin({
+      filename: "[name].js.map",
+      
     })
   ],
   devtool: "source-map"
