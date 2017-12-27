@@ -8,10 +8,12 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://s3.amazonaws.com/ https://api.github.com https://use.fontawesome.com;">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000000">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" type="image/png" href="favicon.png" />
 
   <link rel="stylesheet" href="style.css">
@@ -20,6 +22,19 @@
 
 <body>
   <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
