@@ -7,6 +7,7 @@ process.noDeprecation = true;
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Paths to be used for webpack configuration
 const paths = {
@@ -70,6 +71,20 @@ module.exports = {
             ["transform-object-rest-spread"]
           ]
         }
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: "url-loader",
+        options: {
+          limit: 10000
+        }
       }
     ]
   },
@@ -92,9 +107,9 @@ module.exports = {
     // Uglify plugin, depending on the devtool options, Source Maps are generated.
     new webpack.optimize.UglifyJsPlugin({ sourceMap: true }),
     new webpack.SourceMapDevToolPlugin({
-      filename: "[name].js.map",
-      
-    })
+      filename: "[name].js.map"
+    }),
+    new ExtractTextPlugin("style.css")
   ],
   devtool: "source-map"
 };

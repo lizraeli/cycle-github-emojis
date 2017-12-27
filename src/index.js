@@ -3,6 +3,7 @@ import { makeDOMDriver } from "@cycle/dom";
 import { App } from "./app";
 import xs from "xstream";
 import storageDriver from "@cycle/storage";
+import "./style.css";
 
 const main = App;
 
