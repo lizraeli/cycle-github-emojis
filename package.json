@@ -4,7 +4,21 @@
   "author": "Lev Izraelit",
   "license": "ISC",
   "devDependencies": {
-    "cycle-scripts": "2.1.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "chalk": "^2.1.0",
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^4.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "inquirer": "^3.3.0",
+    "jest": "^21.2.1",
+    "react-dev-utils": "^4.1.0",
+    "snabbdom-pragma": "^2.5.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
     "@cycle/dom": "20.1.0",
@@ -13,13 +27,8 @@
     "xstream": "11.1.0"
   },
   "scripts": {
-    "start": "cycle-scripts start",
-    "test": "cycle-scripts test",
-    "build": "cycle-scripts build",
-    "eject": "cycle-scripts eject"
-  },
-  "cca": {
-    "language": "javascript",
-    "streamLib": "xstream"
+    "start": "node scripts/start.js",
+    "test": "node scripts/test.js",
+    "build": "node scripts/build.js"
   }
 }

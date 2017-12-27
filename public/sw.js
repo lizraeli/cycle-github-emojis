@@ -1,9 +1,8 @@
-var CACHE_NAME = "cycle-github-emoji-cache-v1";
+var CACHE_NAME = "my-site-cache-v1";
 var urlsToCache = [
   "index.html",
   "style.css",
-  "app.bundle.js",
-  "app.bundle.js.map"
+  "bundle.js"
 ];
 
 self.addEventListener("install", function(event) {

@@ -15,6 +15,6 @@ A github emoji viewer made with [Cycle.js](https://cycle.js.org/).
 
 * [Cycle.js](https://cycle.js.org/)
 * [xstream](http://staltz.github.io/xstream/)
-* [create-cycle-app](https://github.com/cyclejs-community/create-cycle-app)
-  * JSX [using snabbdom pragma](https://github.com/Swizz/snabbdom-pragma)
+* JSX [using snabbdom pragma](https://github.com/Swizz/snabbdom-pragma)
 * [Cycle Storage Driver](https://github.com/cyclejs/storage)
+* Webpack and Babel
